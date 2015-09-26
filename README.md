@@ -9,4 +9,5 @@
 ## JavaScript
 
  - [JS启示录《JavaScript Enlightenment》阅读分享与延伸](02_JavaScript/jsenlightenment.markdown)
+ - [异步JS](02_JavaScript/AsyncJavascript.md)
 
