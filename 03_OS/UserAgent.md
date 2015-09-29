@@ -19,6 +19,11 @@
  - UC: `Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; MX4 Build/KOT49H) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/10.7.0.634 U3/0.8.0 Mobile Safari/534.30`
  - Chrome: `Mozilla/5.0 (Linux; Android 4.4.2; MX4 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.94 Mobile Safari/537.36`
  - Safari: `Mozilla/5.0 (iPhone; CPU iPhone OS 9_0 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13A344 Safari/601.1`
+ 
+### 平台
+
+ - Nexus7: Mozilla/5.0 (Linux; Android 4.3; Nexus 7 Build/JSS15Q) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2307.2 Safari/537.36
+
 
 
 ## 客户端JS能拿到的user agent
