@@ -11,7 +11,7 @@
 | [easyrec](http://easyrec.org/) | | Java | |
 | [PredictionIO](https://prediction.io/) | | scala | Star: 7908 Fork: 956 Collecting Data: `rate` & `buy` |
 | [Seldon](http://www.seldon.io/) | | | |
-| [Mahout](http://mahout.apache.org/general/downloads.html) | | | Star: 572 Fork: 456 |
+| [Apache Mahout](http://mahout.apache.org/general/downloads.html) | | Java | Star: 572 Fork: 456 |
 | [Dato (Graphlab)](https://dato.com/products/create/open_source.html) || C++ ||
 
 ### References
