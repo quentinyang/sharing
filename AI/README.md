@@ -1,8 +1,11 @@
 # AI (Artificial Intelligence)
 
-# Appendix
+## Recommendation System
 
-## Opensource
+
+## Appendix
+
+### Opensource
 | Name | Feature | Language | Description |
 | --- | --- | --- | --- |
 | [easyrec](http://easyrec.org/) | | Java | |
@@ -11,7 +14,7 @@
 | [Mahout](http://mahout.apache.org/general/downloads.html) | | | Star: 572 Fork: 456 |
 | [Dato (Graphlab)](https://dato.com/products/create/open_source.html) || C++ ||
 
-## References
+### References
  - [List of artificial intelligence projects](https://en.wikipedia.org/wiki/List_of_artificial_intelligence_projects)
  - [Recommender systems, Part 1: Introduction to approaches and algorithms ](http://www.ibm.com/developerworks/library/os-recommender1/)
  - [Recommender systems, Part 2: Introducing open source engines](http://www.ibm.com/developerworks/library/os-recommender2/)
@@ -26,7 +29,7 @@
     1. [网易云音乐的歌单推荐算法是怎样的？](http://www.zhihu.com/question/26743347)
     1. [如何做好「推荐算法」？有哪些常见的错误需要避免？](http://www.zhihu.com/question/20558659)
 
-## 算法
+### 算法
  - [皮尔逊积矩相关系数](https://zh.wikipedia.org/zh-cn/%E7%9A%AE%E5%B0%94%E9%80%8A%E7%A7%AF%E7%9F%A9%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0)
  - [聚类算法（Cluster algorithms）](https://en.wikipedia.org/wiki/Cluster_analysis)
  - [Collaborative filtering](https://en.wikipedia.org/wiki/Collaborative_filtering)
