@@ -1,15 +1,48 @@
 # AI (Artificial Intelligence)
 
+## TODO
+ * 采样数据（获取哪些数据？通过什么样的方式/途径？）
+ * 建立模型
+ * 数据验证
+ * 算法调优
+
 ## Recommendation System
 
-[PredictionIO](https://prediction.io/)
- - 快速构建和部署一个引擎作为web服务生产和可定制的模板;
- - 回复实时动态查询一次部署为web服务; 　　
- - 从多个平台统一数据批处理或实时综合预测分析; 　
- - 加快机器学习建模与系统流程和预构建的评估措施; 　　
- - 机器学习和数据处理库的支持如Spark MLLib和OpenNLP; 　　
- - 实现自己的机器学习模型和无缝地将其纳入您的引擎; 　　
- - 简化数据基础设施管理。
+### CF总览
+
+#### User CF & Item CF总结
+| CF |群体/个体|计算代价|使用场景|冷启动|可解释性|实时性|
+| -- | -- | -- | -- | -- | -- | -- | -- |
+|User CF|更依赖于当前用户相近的用户群体的社会化行为|适用于用户数较少的场合|时效性强，用户个性化兴趣不太显著的场合  |新加入的物品能很快进入推荐列表|弱|用户新的行为不一定导致推荐结果的变化|
+|Item CF  | 更侧重用户自身的个体行为 |    适用于物品数较少的场合 |长尾物品丰富，用户个性化需求强烈的场合 |新加入的用户能很快得到推荐  | 强 |  用户新的行为一定导致推荐结果的变化 |
+
+#### User CF
+ ![User CF](http://www.ibm.com/developerworks/cn/web/1103_zhaoct_recommstudy2/image015.gif)
+
+#### Item CF
+ ![Item CF](http://www.ibm.com/developerworks/cn/web/1103_zhaoct_recommstudy2/image017.gif)
+
+### [PredictionIO](https://prediction.io/)
+
+#### Introduction
+
+ - __PredictionIO platform__ - our open source machine learning stack for building, evaluating and deploying engines with machine learning algorithms.
+ - __Event Server__ - our open source machine learning analytics layer for unifying events from multiple platforms
+ - __Template Gallery__ - the place for you to download [engine templates](http://templates.prediction.io/) for different type of machine learning applications
+
+ ![Overview](https://docs.prediction.io/images/overview-multiengines-b703caac.png)
+
+ ![Event Server](https://docs.prediction.io/images/overview-singleengine-0a99200d.png)
+
+ __优点:__
+
+  - 快速构建和部署一个引擎作为web服务生产和可定制的模板;
+  - 回复实时动态查询一次部署为web服务; 　　
+  - 从多个平台统一数据批处理或实时综合预测分析; 　
+  - 加快机器学习建模与系统流程和预构建的评估措施; 　　
+  - 机器学习和数据处理库的支持如Spark MLLib和OpenNLP; 　　
+  - 实现自己的机器学习模型和无缝地将其纳入您的引擎; 　　
+  - 简化数据基础设施管理。
 
 ## Appendix
 
@@ -33,6 +66,7 @@
  - [探索推荐引擎内部的秘密，第 3 部分: 深入推荐引擎相关算法 - 聚类](http://www.ibm.com/developerworks/cn/web/1103_zhaoct_recommstudy3/)
  - [技术干货：人工智能和机器学习领域中有趣的开源项目](http://blog.csdn.net/zdy0_2004/article/details/41733835)
  - [Apache Mahout简介](http://www.ibm.com/developerworks/cn/java/j-mahout/index.html)
+ - [Apache Spark](http://spark.apache.org/)
  - [Netflix prize](http://techblog.netflix.com/2012/04/netflix-recommendations-beyond-5-stars.html?cm_mc_uid=10233987865214442943937&cm_mc_sid_50200000=1445659858)
  - [推荐系统开源软件列表汇总和点评](http://blog.csdn.net/cserchen/article/details/14231153)
  - [os-recommender2nder System with the recosystem Package](https://cran.r-project.org/web/packages/recosystem/vignettes/introduction.html)
@@ -41,6 +75,10 @@
     1. [如何做好「推荐算法」？有哪些常见的错误需要避免？](http://www.zhihu.com/question/20558659)
  - [美团推荐算法实践](http://tech.meituan.com/mt-recommend-practice.html)
  - [推荐系统中所使用的混合技术介绍](http://www.52ml.net/318.html)
+ - [Databricks孟祥瑞：ALS 在 Spark MLlib 中的实现](http://www.csdn.net/article/2015-05-07/2824641) 2015-5-07
+ - [推荐算法总结Recommendation](http://blog.csdn.net/oopsoom/article/details/33740799) 2014-06-23 
+ - [Spark机器学习库mllib之协同过滤](http://blog.csdn.net/oopsoom/article/details/34462329) 2014-06-25 
+ - [MovieLens测试数据](http://grouplens.org/datasets/movielens/)
 
 ### 算法
 
@@ -59,4 +97,5 @@
     - [User CF]
     - [Item CF]
     - [Slope One](https://en.wikipedia.org/wiki/Slope_One)
+ -  交替最小二乘 (ALS: alternating least squares)
  
