@@ -1,10 +1,26 @@
 # AI (Artificial Intelligence)
 
-## TODO
- * 采样数据（获取哪些数据？通过什么样的方式/途径？）
- * 建立模型
- * 数据验证
- * 算法调优
+## Done & Plan & Todo
+### Done
+ 1. 研究推荐，得出一些结论：
+    1. __不同的推荐需要不同的策略或算法。__
+    1. __一种推荐需求也仍然需要混合不同的策略或算法以提高准确性。__
+ 1. 选定技术平台（[查看下文PredictionIO](#11)）
+ 1. Demo （猜你喜欢）
+
+### Plan
+ 1. 第一版：猜你喜欢 （1周上线）
+ ![Guess you like](./guess.jpg)
+ 1. 基于PredictionIO增加业务逻辑代码和自定义算法，为后续的推荐需求准备。
+ 
+### Todo
+ * @产品，技术，BI，讨论：采样数据（获取哪些数据？通过什么样的方式/途径？）
+ * @产品，技术，BI，讨论：其他推荐需求的模型
+ * @技术，怎样验证推荐数据准确性
+ * @技术&BI，算法调优
+
+### Demo
+ ![Demo data](./demo.jpg)
 
 ## Recommendation System
 
@@ -97,5 +113,8 @@
     - [User CF]
     - [Item CF]
     - [Slope One](https://en.wikipedia.org/wiki/Slope_One)
- -  交替最小二乘 (ALS: alternating least squares)
+ -  交替最小二乘法 (ALS: alternating least squares): 其实als就是损失函数最小化的一个求解方法，当然还有其他方法比如SGD等。
+    - [ALS矩阵分解推荐模型](http://www.bubuko.com/infodetail-657644.html)
+    - [Databricks孟祥瑞：ALS 在 Spark MLlib 中的实现](http://www.csdn.net/article/2015-05-07/2824641)
+    - [知乎：Spark mllib中ALS算法的思想](http://www.zhihu.com/question/31509438)
  
