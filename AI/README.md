@@ -7,6 +7,35 @@
     1. __一种推荐需求也仍然需要混合不同的策略或算法以提高准确性。__
  1. 选定技术平台（[查看下文PredictionIO](#11)）
  1. Demo （猜你喜欢）
+ ```
+ // Step 1: start event server
+ pio eventserver&
+
+ // Step 2: import online data ([http://192.168.160.51:7070/events.json?accessKey=xxx](http://192.168.160.51:7070/events.json?accessKey=8KovDJ9cw8DkzTFKe8g23gTkkJoNaCefaagKcBEn3JIpt04A4nyBfcIwxbOPvBS1) )
+ python data/import_eventserver_online.py --access_key 8KovDJ9cw8DkzTFKe8g23gTkkJoNaCefaagKcBEn3JIpt04A4nyBfcIwxbOPvBS1
+
+ // Step 3: enter `AngejiaRecommendation` folder and edit `engine.json`
+ cd AngejiaRecommendation 
+ vi engine.json
+
+ // Step 4: Building
+ pio build --verbose
+
+ // Step 5: Training
+ pio train
+
+ // Step 6: Deploy ([http://192.168.160.51:8000/](http://192.168.160.51:8000/))
+ pio deploy
+
+ ```
+ 
+ Use Data
+
+ ```
+ // Query
+ curl -H "Content-Type: application/json" \
+ -d '{ "user": "1", "num": 4 }' http://localhost:8000/queries.json
+ ```
 
 ### Plan
  1. 第一版：猜你喜欢 （1周上线）
