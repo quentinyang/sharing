@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <link href="src/game.css" rel="stylesheet"/>
+    <script src="build/react.js"></script>
+    <!-- No need for JSXTransformer! -->
+  </head>
+  <body>
+
+  <!--spade: 黑桃-->
+  <!--heart: 红桃-->
+  <!--diamond: 方块-->
+  <!--club: 草花-->
+  <!--joker: 鬼王-->
+    <div>
+        <ul class="poker-cards">
+            <li class="poker flower-spade num-1 "></li>
+            <li class="poker flower-heart num-2 "></li>
+            <li class="poker flower-diamond num-3 "></li>
+            <li class="poker flower-club num-11 "></li>
+            <li class="poker joker "></li>
+            <li class="poker joker"></li>
+        </ul>
+    </div>
+    <div id="game" class="cards"></div>
+    <script src="build/game.js"></script>
+  </body>
+</html>
