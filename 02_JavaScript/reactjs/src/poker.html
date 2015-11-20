@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Hello React!</title>
+    <link href="css/poker.css" rel="stylesheet"/>
+    <script src="libs/react/react.min.js"></script>
+    <!-- No need for JSXTransformer! -->
+  </head>
+  <body>
+
+  <!--spade: 黑桃-->
+  <!--heart: 红桃-->
+  <!--diamond: 方块-->
+  <!--club: 草花-->
+  <!--joker: 鬼王-->
+    <div>
+        <ul class="poker">
+            <li class="card flower-spade num-1 "></li>
+            <li class="card flower-heart num-2 "></li>
+            <li class="card flower-diamond num-3 "></li>
+            <li class="card flower-club num-11 "></li>
+            <li class="card joker "></li>
+            <li class="card joker"></li>
+        </ul>
+    </div>
+    
+    <div id="poker" class="cards"></div>
+
+
+    <script src="build/poker.js"></script>
+  </body>
+</html>

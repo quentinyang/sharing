@@ -1,0 +1,73 @@
+html{
+    color: #3e3e3e;
+    font: 62.5% "Helvetica Neue",Helvetica,STHeiTi,Arial,sans-serif;
+}
+div,ul,p{
+    padding: 0;
+    margin: 0;
+}
+.poker{
+    max-width: 48rem;
+    margin: 0 auto;
+}
+.poker .card{
+    border: 1px solid #333;
+    border-radius: 10px;
+    background: #ccc;
+    width: 3rem;
+    height: 4rem;
+    display: inline-block;
+}
+.poker .card.shape-club{
+    background: red;
+}
+.poker .card::after{
+    content: ' ';
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    width: 1rem;
+    height: 1rem;
+}
+.poker .card.num-0::after{
+    content: '鬼';
+}
+.poker .card.num-1::after{
+    content: 'A';
+}
+.poker .card.num-2::after{
+    content: '2';
+}
+.poker .card.num-3::after{
+    content: '3';
+}
+.poker .card.num-4::after{
+    content: '4';
+}
+.poker .card.num-5::after{
+    content: '5';
+}
+.poker .card.num-6::after{
+    content: '6';
+}
+.poker .card.num-7::after{
+    content: '7';
+}
+.poker .card.num-8::after{
+    content: '8';
+}
+.poker .card.num-9::after{
+    content: '9';
+}
+.poker .card.num-10::after{
+    content: '10';
+}
+.poker .card.num-11::after{
+    content: 'J';
+}
+.poker .card.num-12::after{
+    content: 'Q';
+}
+.poker .card.num-13::after{
+    content: 'K';
+}
