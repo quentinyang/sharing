@@ -18,3 +18,4 @@ jsx --watch src/js/ src/build/
 - [React unofficial guide](http://ricostacruz.com/cheatsheets/react.html)
 - [material-ui](http://material-ui.com/)
 - [elemental-ui](http://elemental-ui.com/)
+- [react-foundation-apps](http://webrafter.com/opensource/react-foundation-apps/install)
