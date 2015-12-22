@@ -20,3 +20,4 @@ jsx --watch src/js/ src/build/
 - [elemental-ui](http://elemental-ui.com/)
 - [react-foundation-apps](http://webrafter.com/opensource/react-foundation-apps/install)
 - [Complementary Tools](https://github.com/facebook/react/wiki/Complementary-Tools)
+- [Faster Gulp, Browserify, Babelify, Watchify and React build process explained.](http://mikevalstar.com/post/fast-gulp-browserify-babelify-watchify-react-build/)
