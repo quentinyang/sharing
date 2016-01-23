@@ -35,15 +35,14 @@ cd  php-7.0.2
 
 make
 
-sudo make install
+make install
 
 #最后来测试一把
-
 /usr/local/php7/bin/php -v
 
-PHP 7.0.0alpha1 (cli) (built: Jun 14 2015 18:24:50) 
+PHP 7.0.2 (cli) (built: Jan 24 2016 02:37:03) ( ZTS )
 Copyright (c) 1997-2015 The PHP Group
-Zend Engine v3.0.0-dev, Copyright (c) 1998-2015 Zend Technologies
+Zend Engine v3.0.0, Copyright (c) 1998-2015 Zend Technologies
 ```
 
 上面的过程如果顺利的话。php7就安装成功了，如果有错误的话那还是得解决一下，这里就贴出几个我在网站上看到的安装过程中遇到的一些错误：
@@ -92,8 +91,65 @@ Zend Engine v3.0.0-dev, Copyright (c) 1998-2015 Zend Technologies
      ./configure --prefix=/usr/local/php7 --enable-fpm --with-fpm-user=www --with-fpm-group=www --with-mysqli --with-pdo-mysql --with-iconv-dir --with-freetype-dir --with-jpeg-dir --with-png-dir --with-zlib --with-libxml-dir=/usr --enable-xml --disable-rpath --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --with-curl --enable-mbregex --enable-mbstring --with-mcrypt --enable-ftp --with-gd --enable-gd-native-ttf --with-openssl --with-mhash --enable-pcntl --enable-sockets --with-xmlrpc --enable-zip--enable-soap --without-pear --with-gettext --disable-fileinfo --enable-maintainer-zts
      ```
 
+## Nginx ＋ php-fpm
+在使用nginx时使用php-fpm执行php代码。
+我本地原来是5.5的，需要替换成7.0。过程如下：
+1. 如果已经装过php-fpm，请先确认安装位置：
+    ```
+    which php-fpm
+    # 我本地:
+    # /usr/sbin/php-fpm
+    ```
+
+1. 使用刚安装好的php-fpm替换
+    ```
+    cp /usr/local/etc/php7/sbin/php-fpm /usr/sbin/php-fpm
+
+    # 查看下
+    php-fpm -v
+
+    # PHP 7.0.2 (fpm-fcgi) (built: Jan 24 2016 02:37:18)
+    # Copyright (c) 1997-2015 The PHP Group
+    # Zend Engine v3.0.0, Copyright (c) 1998-2015 Zend Technologies
+    ```
+
+1. 执行php-fpm
+    ```
+    sudo php-fpm
+    ```
+
+1. 配置nginx.conf
+
+    ```
+    location ~ \.php$ {
+        include /usr/local/etc/nginx/fastcgi.conf;
+        fastcgi_intercept_errors on; 
+        # /workspace/www 是我本地的根目录
+        fastcgi_param  SCRIPT_FILENAME  /workspace/www$fastcgi_script_name;
+        fastcgi_pass   127.0.0.1:9000; 
+    }   
+    ```
+1. phpinfo
+
+    在`/workspace/www/`下新建phpinfo.php，内容：
+
+    ```
+    <?php
+    phpinfo();
+    ```
+
+1. 重启nginx,访问 localhost/phpinfo.php
+
+    ```
+    sudo nginx -s reload
+    ```
+
+    正常的话就能看到php的信息了。
+    
+## Install Mysql 
 
 
 ## Reference
 - [PHP 7下载](http://cn2.php.net/get/php-7.0.2.tar.gz/from/this/mirror)
 - [Mac 下 Nginx、MySQL、PHP-FPM 的安装配置](http://blog.csdn.net/iamduoluo/article/details/38346291)
+- [MAC下尝试PHP7 alpha版本的安装](http://segmentfault.com/a/1190000002904436)
