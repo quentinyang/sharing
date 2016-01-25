@@ -120,14 +120,59 @@ Zend Engine v3.0.0, Copyright (c) 1998-2015 Zend Technologies
 
 1. 配置nginx.conf
 
+    给出完整conf供参考：
+
     ```
-    location ~ \.php$ {
-        include /usr/local/etc/nginx/fastcgi.conf;
-        fastcgi_intercept_errors on; 
-        # /workspace/www 是我本地的根目录
-        fastcgi_param  SCRIPT_FILENAME  /workspace/www$fastcgi_script_name;
-        fastcgi_pass   127.0.0.1:9000; 
-    }   
+    server {
+        listen 80;
+        server_name localhost;
+        expires max;
+
+        access_log   /var/log/nginx/local.access.log;
+        error_log    /var/log/nginx/local.error.log;
+
+        # /Users/quentin/workspace/project/local是我本地的根目录
+        root /Users/quentin/workspace/project/local;
+
+        location / {
+            root /Users/quentin/workspace/project/local;
+        }
+
+        #proxy the php scripts to php-fpm  
+        location ~ \.php$ {
+            include /usr/local/etc/nginx/fastcgi.conf;
+            fastcgi_intercept_errors on; 
+            fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            fastcgi_pass   127.0.0.1:9000; 
+        }   
+
+
+    }
+
+    # 业务项目，index.php作为入口的配置
+    server {
+        listen       80;
+        server_name  www.angejia;
+
+        access_log   /var/log/nginx/app-site.access.log;
+        error_log    /var/log/nginx/app-site.error.log;
+
+        root /Users/quentin/workspace/project/angejia/app-site/public;
+
+        index index.php;
+
+        location / {
+            try_files $uri /index.php$is_args$args;
+        }
+
+        location ~ \.php$ {
+            include /usr/local/etc/nginx/fastcgi.conf;
+            fastcgi_intercept_errors on; 
+            fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            fastcgi_pass   127.0.0.1:9000; 
+        }
+
+    }
     ```
 1. phpinfo
 
@@ -145,8 +190,10 @@ Zend Engine v3.0.0, Copyright (c) 1998-2015 Zend Technologies
     ```
 
     正常的话就能看到php的信息了。
+
+## Install Mysql
     
-## Install Mysql 
+    Todo
 
 
 ## Reference
