@@ -176,14 +176,14 @@ Zend Engine v3.0.0, Copyright (c) 1998-2015 Zend Technologies
     ```
 1. phpinfo
 
-    在`/workspace/www/`下新建phpinfo.php，内容：
+    在`/Users/quentin/workspace/project/local`下新建index.php，内容：
 
     ```
     <?php
     phpinfo();
     ```
 
-1. 重启nginx,访问 localhost/phpinfo.php
+1. 重启nginx,访问 localhost/index.php
 
     ```
     sudo nginx -s reload
