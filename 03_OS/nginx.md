@@ -20,6 +20,15 @@ server {
       try_files $uri /index.html;
     }
 
+    # 不存在的资源 返回404
+    location ~* \.(js|css|ico|gif|jpg|png|swf|flv)$ {
+        try_files $uri /404.html;
+    }
+
+    location = /404.html {
+        # 指定返回404状态和内容
+        return 404 "Not Found\n";
+    }
 }
 ```
 
