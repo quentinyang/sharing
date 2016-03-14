@@ -95,23 +95,34 @@ Zend Engine v3.0.0, Copyright (c) 1998-2015 Zend Technologies
 在使用nginx时使用php-fpm执行php代码。
 我本地原来是5.5的，需要替换成7.0。过程如下：
 1. 如果已经装过php-fpm，请先确认安装位置：
-    ```
-    which php-fpm
-    # 我本地:
-    # /usr/sbin/php-fpm
-    ```
+ 
+ ```
+ which php-fpm
+ # 我本地:
+ # /usr/sbin/php-fpm
+ ```
 
 1. 使用刚安装好的php-fpm替换
-    ```
-    cp /usr/local/etc/php7/sbin/php-fpm /usr/sbin/php-fpm
+ ```
+ cp /usr/local/php7/sbin/php-fpm /usr/sbin/php-fpm
+ 
+ # 查看下
+ php-fpm -v
+ 
+ # PHP 7.0.2 (fpm-fcgi) (built: Jan 24 2016 02:37:18)
+ # Copyright (c) 1997-2015 The PHP Group
+ # Zend Engine v3.0.0, Copyright (c) 1998-2015 Zend Technologies
+ ```
 
-    # 查看下
-    php-fpm -v
+ 注意: 
 
-    # PHP 7.0.2 (fpm-fcgi) (built: Jan 24 2016 02:37:18)
-    # Copyright (c) 1997-2015 The PHP Group
-    # Zend Engine v3.0.0, Copyright (c) 1998-2015 Zend Technologies
-    ```
+ 如果是Mac，在升级到10.11.3的时候，可能会遇到权限问题如提示：`...: Operation not permitted`。这个据说是Rootless机制，[请参考这里](https://www.zhihu.com/question/36108835)。
+ 
+ 我的解决办法是先执行：`echo $PATH` 看下输出，我的如下：
+
+ `/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:...`
+
+ 所以按照系统指令查找顺序，我把php-fpm放到`/usr/local/bin/`下了（注意看开头，第一个被查找），问题得到解决。
 
 1. 执行php-fpm
     ```
