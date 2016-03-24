@@ -29,9 +29,17 @@ Successfully logged-in. Your session file was written to /Users/quentin/.code-pu
 ```
 
  1. 我自己用codepush发布更新时，是放在./release下，然后再push到云服务器端：
+ 
  ```
+ # IOS
  react-native bundle --platform ios --entry-file index.ios.js \
  --bundle-output ./release/index.ios.jsbundle \
+ --assets-dest ./release \
+ --dev false
+
+ # Android
+ react-native bundle --platform android --entry-file index.android.js  \
+ --bundle-output ./release/index.android.jsbundle \
  --assets-dest ./release \
  --dev false
  ```
@@ -44,12 +52,25 @@ Successfully logged-in. Your session file was written to /Users/quentin/.code-pu
  
  1. 正常发布时（注意assets-dest/和）：
  ```
+ # IOS
  react-native bundle --platform ios --entry-file index.ios.js \
  --bundle-output ./index.ios.jsbundle \
  --assets-dest ./ \
  --dev false
+
+ # Android
+ react-native bundle --platform android --entry-file index.android.js \
+ --bundle-output ./android/app/src/main/assets/index.android.jsbundle \
+ --assets-dest ./android/app/src/main/res/
+ --dev false
  ```
 
+ 1. Android上的小坑：
+    1. `adb shell input keyevent 82`代替摇一摇
+    1. 如果模拟器没有键盘和按键，那么需要在创建虚拟器时选个皮肤("skin")
+    1. Android上如有莫名报错，先尝试把~/.gradle 和 RN App项目目录的权限重置一下。（这个比较坑，曾花费我一天时间）
+
+ 
 ## 参考
 - [Code Push - Get started fast](http://microsoft.github.io/code-push/)
 - [Github react native code push](https://github.com/Microsoft/react-native-code-push)
