@@ -50,7 +50,7 @@ Successfully logged-in. Your session file was written to /Users/quentin/.code-pu
  code-push release YourApp ./release 1.0.0
  ```
  
- 1. 正常发布时（注意assets-dest/和）：
+ 1. 正常发布时（注意安卓下的assets-dest）：
  ```
  # IOS
  react-native bundle --platform ios --entry-file index.ios.js \
