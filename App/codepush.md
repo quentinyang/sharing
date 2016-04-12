@@ -70,7 +70,14 @@ Successfully logged-in. Your session file was written to /Users/quentin/.code-pu
     1. 如果模拟器没有键盘和按键，那么需要在创建虚拟器时选个皮肤("skin")
     1. Android上如有莫名报错，先尝试把~/.gradle 和 RN App项目目录的权限重置一下。（这个比较坑，曾花费我一天时间）
 
+
+## 常用命令
+
+1. `code-push app ls` - 列出所有App
+1. `code-push deployment ls <appName> -k`
+
  
 ## 参考
 - [Code Push - Get started fast](http://microsoft.github.io/code-push/)
 - [Github react native code push](https://github.com/Microsoft/react-native-code-push)
+- [Codepush Cli](http://microsoft.github.io/code-push/docs/cli.html)
