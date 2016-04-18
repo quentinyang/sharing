@@ -83,6 +83,15 @@ public void onCreate(Bundle savedInstanceState) {
  - __`推荐`__[个推的文件](http://docs.igetui.com/pages/viewpage.action?pageId=1934165)
  - [如何生成p12文件](http://blog.csdn.net/zhugq_1988/article/details/37656107)
 
+
+## IOS Launcher Image 启动图片
+
+参考另一篇[IOS Icon](./ios_launcher)
+
+## IOS Launcher Image 启动图片
+
+参考另一篇[IOS Launcher Image](./ios_launcher)
+
 ## Links
 1. [ReactNative中文](http://reactnative.cn/docs/0.21/getting-started.html#content)
 1. [中文文档](http://wiki.jikexueyuan.com/project/react-native/)
