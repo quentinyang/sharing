@@ -22,19 +22,15 @@ nginx -t
 ```
 
 ## Install PHP 7
-1. Download [php-7.0.2.tar.gz](http://cn2.php.net/get/php-7.0.2.tar.gz/from/this/mirror)
+1. Download [php-7.0.5.tar.gz](http://cn2.php.net/distributions/php-7.0.5.tar.gz)
 1. 解压安装
 ```
 tar -zxvf php-7.0.2.tar.gz
-
 cd  php-7.0.2
-
 ./buildconf
-
-./configure --prefix=/usr/local/php7 --enable-fpm --with-fpm-user=www --with-fpm-group=www --with-mysqli --with-pdo-mysql --with-iconv-dir --with-freetype-dir --with-jpeg-dir --with-png-dir --with-zlib --with-libxml-dir=/usr --enable-xml --disable-rpath --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --with-curl --enable-mbregex --enable-mbstring --with-mcrypt --enable-ftp --with-gd --enable-gd-native-ttf --with-openssl --with-mhash --enable-pcntl --enable-sockets --with-xmlrpc --enable-zip--enable-soap --without-pear --with-gettext --disable-fileinfo --enable-maintainer-zts
-
+# 如果中间出错了，先make clean再重新./configure
+./configure --prefix=/usr/local/php7 --enable-fpm --with-fpm-user=www --with-fpm-group=www --with-mysqli --with-pdo-mysql --with-iconv-dir --with-freetype-dir --with-jpeg-dir --with-png-dir --with-zlib --with-libxml-dir=/usr --enable-xml --disable-rpath --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --with-curl --enable-mbregex --enable-mbstring --with-mcrypt --enable-ftp --with-gd --enable-gd-native-ttf --with-openssl --with-mhash --enable-pcntl --enable-sockets --with-xmlrpc --enable-zip --enable-soap --without-pear --with-gettext --disable-fileinfo --enable-maintainer-zts 
 make
-
 make install
 
 #最后来测试一把
@@ -47,7 +43,7 @@ Zend Engine v3.0.0, Copyright (c) 1998-2015 Zend Technologies
 
 上面的过程如果顺利的话。php7就安装成功了，如果有错误的话那还是得解决一下，这里就贴出几个我在网站上看到的安装过程中遇到的一些错误：
 
-1. 错误1: `configure: error: jpeglib.h not found.`
+1. 错误: `configure: error: jpeglib.h not found.`
 
     解决办法：
     ```
@@ -56,7 +52,7 @@ Zend Engine v3.0.0, Copyright (c) 1998-2015 Zend Technologies
 
     这一步，如果你已经安装过的话，直接跳过。
 
-1. 错误2: `configure: error: png.h not found.`
+1. 错误: `configure: error: png.h not found.`
 
     解决办法：
     ```
@@ -74,9 +70,11 @@ Zend Engine v3.0.0, Copyright (c) 1998-2015 Zend Technologies
     ```
     libpng下载地址： [libpng-1.6.16.tar.gz](http://www.imagemagick.org/download/delegates/libpng-1.6.16.tar.gz)
 
-1. 错误3: `configure: error: Cannot locate header file libintl.h` (我遇到这个错误)
+1. 错误: `configure: error: Cannot locate header file libintl.h` (我遇到这个错误)
 
     解决办法：
+
+    解决办法很简单，如果没有安装gettext，那么先安装`brew install gettext`。然后再将配置`--with-gettext`修改为：`--with-gettext=/usr/local/opt/gettext`即可。
 
     1. 安装 gettext
      ```
@@ -88,8 +86,45 @@ Zend Engine v3.0.0, Copyright (c) 1998-2015 Zend Technologies
     1. 重新执行配置（跟上面一模一样，没变化）
 
      ```
-     ./configure --prefix=/usr/local/php7 --enable-fpm --with-fpm-user=www --with-fpm-group=www --with-mysqli --with-pdo-mysql --with-iconv-dir --with-freetype-dir --with-jpeg-dir --with-png-dir --with-zlib --with-libxml-dir=/usr --enable-xml --disable-rpath --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --with-curl --enable-mbregex --enable-mbstring --with-mcrypt --enable-ftp --with-gd --enable-gd-native-ttf --with-openssl --with-mhash --enable-pcntl --enable-sockets --with-xmlrpc --enable-zip--enable-soap --without-pear --with-gettext --disable-fileinfo --enable-maintainer-zts
+     ./configure --prefix=/usr/local/php7 --enable-fpm --with-fpm-user=www --with-fpm-group=www --with-mysqli --with-openssl --with-pdo-mysql --with-iconv-dir --with-freetype-dir --with-jpeg-dir --with-png-dir --with-zlib --with-libxml-dir=/usr --enable-xml --disable-rpath --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --with-curl --enable-mbregex --enable-mbstring --with-mcrypt --enable-ftp --with-gd --enable-gd-native-ttf --with-mhash --enable-pcntl --enable-sockets --with-xmlrpc --enable- --enable-soap --without-pear --with-gettext --disable-fileinfo --enable-maintainer-zts
      ```
+
+1. 错误: `configure: error: Cannot find OpenSSL's <evp.h>`
+ 
+    解决办法：
+    ```
+    # 参考https://www.zhihu.com/question/24192936
+    brew link openssl --force
+
+    #brew install openssl
+    #安装xcode命令行 xcode-select --install
+    #重启
+    #然后重新安装
+    ```
+
+1. 错误: `ld: symbol(s) not found for architecture x86_64`
+
+解决办法：
+
+```
+vi Makefile
+# 找到如下地方
+EXTRA_LIBS = -lcrypto -lssl -lz -lresolv -lmcrypt -lltdl -liconv -liconv -lintl -lpng ...
+# 删除所有的-lssl和-lcrypto，最后加上完整路径，如下是我本地的例子
+EXTRA_LIBS = -lz -lresolv -lmcrypt -lltdl -liconv -liconv -lintl -lpng -lz -ljpeg -lcurl -lz -lm -lxml2 -lz -licucore -lm -lcurl -lxml2 -lz -licucore -lm -lfreetype -lxml2 -lz -licucore -lm -lxml2 -lz -licucore -lm -lxml2 -lz -licucore -lm -lxml2 -lz -licucore -lm -lxml2 -lz -licucore -lm -lxml2 -lz -licucore -lm /usr/local/opt/openssl/lib/libssl.dylib  /usr/local/opt/openssl/lib/libcrypto.dylib
+
+然后重新make和make install
+```
+
+
+1. 可能会有人找不到`php.ini`文件，可以通过：`php --ini`来查看：
+
+    ```
+     Configuration File (php.ini) Path: /usr/local/php7/lib
+     Loaded Configuration File:         /usr/local/php7/lib/php.ini
+     Scan for additional .ini files in: (none)
+     Additional .ini files parsed:      (none)
+    ```
 
 ## Nginx ＋ php-fpm
 在使用nginx时使用php-fpm执行php代码。
