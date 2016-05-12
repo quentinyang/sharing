@@ -108,62 +108,74 @@ public void onCreate(Bundle savedInstanceState) {
 1. [React Native Android 踩坑之旅](http://www.alloyteam.com/2015/10/react-native-android-steps-on-tour/)
 1. [苹果加急通道](https://developer.apple.com/contact/app-store/?topic=expedite)
 
+## Android市场准备提交App预览快照尺寸
+
+我推荐：__640*960__（可以和IOS共用）
+
+- 应用宝：截图不能小于320*480像素，推荐480*800像素。JPG、PNG格式。
+
 
 ## AppStore准备提交App预览快照尺寸(jpg)
 
-- 3.5
+汇总一下大概如下（不能包含alpha通道。）：
+- 640x960
+- 640x1136
+- 750x1334
+- 1242x2208
+- 1536 x 2048
 
-```
-640 x 920 pixels for hi-res portrait (without status bar) minimum
-640 x 960 pixels for hi-res portrait (full screen) maximum
-960 x 600 pixels for hi-res landscape (without status bar) minimum
-960 x 640 pixels for hi-res landscape (full screen) maximum
-```
-- 4
+下面摘自官网，对每种屏幕详细尺寸说明：
 
-```
-640 x 1096 pixels for portrait (without status bar) minimum
-640 x 1136 pixels for portrait (full screen) maximum
-1136 x 600 pixels for landscape (without status bar) minimum
-1136 x 640 pixels for landscape (full screen) minimum
-```
-- 4.7
+- 3.5英寸屏幕
 
-```
-Screenshot requirements are:
-72 dpi, RGB, flattened, no transparency
-High-quality JPEG or PNG image file format
-750 x 1334 pixels for hi-res portrait
-1334 x 750 pixels for hi-res landscape
-```
-- 5.5
+    - 640 x 920 pixels for hi-res portrait (without status bar) minimum
+    - __640 x 960__ pixels for hi-res portrait (full screen) maximum
+    - 960 x 600 pixels for hi-res landscape (without status bar) minimum
+    - 960 x 640 pixels for hi-res landscape (full screen) maximum
 
-```
-Screenshot requirements are:
-72 dpi, RGB, flattened, no transparency
-High-quality JPEG or PNG image file format
-1242 x 2208 pixels for hi-res portrait
-2208 x 1242 pixels for hi-res landscape
-```
+- 4英寸屏幕
+
+    - 640 x 1096 pixels for portrait (without status bar) minimum
+    - __640 x 1136__ pixels for portrait (full screen) maximum
+    - 1136 x 600 pixels for landscape (without status bar) minimum
+    - 1136 x 640 pixels for landscape (full screen) minimum
+
+- 4.7英寸屏幕
+
+    ```
+    Screenshot requirements are:
+    72 dpi, RGB, flattened, no transparency
+    High-quality JPEG or PNG image file format
+    ```
+    - __750 x 1334__ pixels for hi-res portrait
+    - 1334 x 750 pixels for hi-res landscape
+
+- 5.5英寸屏幕
+
+    ```
+    Screenshot requirements are:
+    72 dpi, RGB, flattened, no transparency
+    High-quality JPEG or PNG image file format
+    ```
+    - __1242 x 2208__ pixels for hi-res portrait
+    - 2208 x 1242 pixels for hi-res landscape
+
 - iPad
 
-```
-1024 x 748 pixels for landscape (without status bar) minimum
-1024 x 768 pixels for landscape (full screen) maximum
-2048 x 1496 pixels for hi-res (without status bar) minimum
-2048 x 1536 pixels for hi-res landscape (full screen) maximum
-768 x 1004 pixels for portrait (without status bar) minimum
-768 x 1024 pixels for portrait (full screen) maximum
-1536 x 2008 pixels for hi-res portrait (without status bar) minimum
-1536 x 2048 pixels for hi-res portrait (full screen) maximum
-```
+    - 1024 x 748 pixels for landscape (without status bar) minimum
+    - 1024 x 768 pixels for landscape (full screen) maximum
+    - 2048 x 1496 pixels for hi-res (without status bar) minimum
+    - 2048 x 1536 pixels for hi-res landscape (full screen) maximum
+    - 768 x 1004 pixels for portrait (without status bar) minimum
+    - 768 x 1024 pixels for portrait (full screen) maximum
+    - 1536 x 2008 pixels for hi-res portrait (without status bar) minimum
+    - __1536 x 2048__ pixels for hi-res portrait (full screen) maximum
+
 
 - iPad Pro
 
-```
-2048 x 2732 pixels for hi-res portrait
-2732 x 2048 pixels for hi-res landscape
-```
+    - 2048 x 2732 pixels for hi-res portrait
+    - 2732 x 2048 pixels for hi-res landscape
 
 ## TODO
 1. 功能：
