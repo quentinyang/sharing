@@ -1,0 +1,6 @@
+{
+  "name": "Sharing",
+  "tagline": "Sharings: Life, technology, art .etc.",
+  "body": "# 分享\r\n\r\n分享内容涉及：生活、技术、艺术等。\r\n\r\n## 生活篇\r\n\r\n - [游泳心得](01_生活篇/01_游泳心得.md)\r\n\r\n## JavaScript\r\n\r\n - [JS启示录《JavaScript Enlightenment》阅读分享与延伸](02_JavaScript/jsenlightenment.markdown)\r\n - [异步JS](02_JavaScript/AsyncJavascript.md)\r\n\r\n## OS\r\n\r\n - [User Agent统计](03_OS/UserAgent.md)\r\n - [How to use multiple ssh keys](03_OS/multiplesshkey.md)\r\n - [Github webhooks](03_OS/GitWebhooks.md)\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
