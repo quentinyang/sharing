@@ -88,3 +88,4 @@ real    0m1.187s
 ```
 
 - [Speeding Up NPM Installs](https://lincolnloop.com/blog/speeding-npm-installs/)
+- [How does Bluebird promisify work?](http://davidvgalbraith.com/how-does-bluebird-promisify-work/)
