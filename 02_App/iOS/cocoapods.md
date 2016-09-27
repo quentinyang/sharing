@@ -1,6 +1,6 @@
 # Cocoapods
 
-# Install (参考链接)[https://segmentfault.com/a/1190000003784636]
+## Install [参考链接](https://segmentfault.com/a/1190000003784636)
 
 ```
 sudo gem install cocoapods --pre
@@ -36,5 +36,13 @@ rvm install 2.2.4
 rvm list
 <!-- 如果想设置为默认版本，可以用这条命令来完成 -->
 rmv use 2.2.4 --default
+```
+
+## 使用pod安装依赖
+
+一切安装好了，使用如下命令安装依赖。（一般使用cocoapods依赖的，项目下都会有`Podfile`文件）
+
+```
+pod install --verbose
 ```
 
