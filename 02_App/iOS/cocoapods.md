@@ -46,3 +46,10 @@ rmv use 2.2.4 --default
 pod install --verbose
 ```
 
+__PS: 安装过程有点慢，要耐心等待__
+
+```
+<!-- 安装完 就可以打开项目了 -->
+open App.xcworkspace
+```
+
