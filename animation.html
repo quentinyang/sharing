@@ -1,0 +1,54 @@
+<html>
+<style>
+
+@keyframes shake {
+
+  from {
+    transform-origin: bottom right;
+    transform: rotate(15deg);
+  }
+
+  to {
+    transform-origin: bottom left;
+    transform: rotate(-15deg);
+  }
+}
+
+.tel{
+    width: 20px;
+    height: 30px;
+    animation: shake 100ms infinite;
+}
+
+
+@keyframes shake-1 {
+    0%   {transform-origin: bottom right;transform: rotate(15deg);}
+    5%   {transform-origin: bottom left;transform: rotate(-15deg);}
+    10%   {transform-origin: bottom right;transform: rotate(15deg);}
+    15%   {transform-origin: bottom left;transform: rotate(-15deg);}
+    20%   {transform-origin: bottom right;transform: rotate(15deg);}
+    25%   {transform-origin: bottom left;transform: rotate(-15deg);}
+    30%   {transform-origin: bottom right;transform: rotate(15deg);}
+    35%   {transform-origin: bottom left;transform: rotate(-15deg);}
+    40%   {transform-origin: bottom right;transform: rotate(15deg);}
+    45%   {transform-origin: bottom left;transform: rotate(-15deg);}
+    75%   {}
+    100%   {}
+}
+
+.tel-1{
+    width:20px;
+    height:30px;
+    position:relative;
+    animation:shake-1 5s infinite;
+    -webkit-animation:shake-1 1s infinite; /* Safari and Chrome */
+
+}
+
+</style>
+
+<body>
+<img class="tel" src="http://img4.imgtn.bdimg.com/it/u=3164414992,1332178943&fm=21&gp=0.jpg"/>
+<img class="tel-1" src="http://img4.imgtn.bdimg.com/it/u=3164414992,1332178943&fm=21&gp=0.jpg"/>
+</body>
+</html>
