@@ -8,18 +8,18 @@
 | 出生年月 | 1985-11-18 |
 | 工作年限 | 9年+ |
 | 毕业院校 | 江苏大学 （2003 - 2007）|
-| 学历专业 | 本科 计算机科学与技术 |
+| 学历专业 | 本科, 计算机科学与技术 |
 | 联系电话 | <a href="tel:15000859650">15000859650</a> |
 | 现居地址 | 上海市，浦东新区，川沙镇 |
 | E-mail | <a href="mailto:ywjrg@163.com">ywjrg@163.com</a> |
 
 ## 个人简历
-- 约10年软件开发经验，含近5年前端开发经验和5年PHP开发。
-- 2年多创业经历，有大前端团队管理经验（含Web、RN、Native），有前端构建和架构能力。
+- 约__10__年软件开发经验，含近5年前端开发经验和5年PHP开发。
+- __2__年多创业经历，有大前端团队管理经验（含Web、RN、Native），有前端__构建__和__架构__能力。
 - 个人要求高，执行力强，能够承担一定压力。
-- 熟悉PHP技术和OOP，对Laravel, Drupal, CI, Yii等流行PHP框架有项目开发经验。
+- 熟悉PHP技术和OOP，对__Laravel__, Drupal, CI, Yii等流行PHP框架有项目开发经验。
 - 熟悉服务器端技术，如: Linux, MySQL, Apache, Cache .etc.
-- 熟悉前端技术栈：H5、ES6、Nodejs、Webpack/Gulp/Grunt、Browserfify、Babel、LESS/SASS等。前端框架：Reactjs+Redux，ReactNative，jQuery/Zepto, Angular, Backbone/Underscore, Bootstrap, D3等。
+- 熟悉前端技术栈：__H5__、__ES6__、__Nodejs/npm__、__Webpack__/__Gulp__/Grunt、Browserfify、Babel、LESS/SASS等。前端框架：__Reactjs__+__Redux__，__ReactNative__，jQuery/Zepto, Angular, Backbone/Underscore, Bootstrap, D3等。
 
 ## 求职意向
 期待工作地点： 上海
