@@ -14,18 +14,16 @@
 | E-mail | <a href="mailto:ywjrg@163.com">ywjrg@163.com</a> |
 
 ## 个人简历
-- 近10年的Web开发经验，包含5年PHP开发和近5年前端开发经验。
-- 熟悉前端Web应用和手机应用开发（同时兼顾前端UI开发和服务器端开发）
-- 对跨平台HTML5应用开发有丰富经验，有用PhoneGap开发平板电脑和手机应用的经验。
-- 有项目管理的经验，有能力领导团队，架构设计，评估和控制开发风险。
-- 熟悉PHP技术和OOP，对Drupal, CI, Yii等流行PHP框架有项目开发经验。
+- 约10年软件开发经验，含近5年前端开发经验和5年PHP开发。
+- 2年多创业经历，有大前端团队管理经验（含Web、RN、Native），有前端构建和架构能力。
+- 个人要求高，执行力强，能够承担一定压力。
+- 熟悉PHP技术和OOP，对Laravel, Drupal, CI, Yii等流行PHP框架有项目开发经验。
 - 熟悉服务器端技术，如: Linux, MySQL, Apache, Cache .etc.
-- 熟悉前端主流的技术：JavaScript, HTML5, CSS3 等。对主流JS框架有丰富经验：jQuery, Angular, Bootstrap, Backbone, Underscore, D3 等。
-- 熟悉版本控制软件，并善用于项目管理：SVN, Git 等。
+- 熟悉前端技术栈：H5、ES6、Nodejs、Webpack/Gulp/Grunt、Browserfify、Babel、LESS/SASS等。前端框架：Reactjs+Redux，ReactNative，jQuery/Zepto, Angular, Backbone/Underscore, Bootstrap, D3等。
 
 ## 求职意向
 期待工作地点： 上海
-期待职位：技术+管理
+期待职位：技术+管理均可，主要看公司发展和个人空间。
 
 ## 职业经验（倒序）
 ### 安居客 + 安个家（上海）- 前端开发主管（2014-05 ～ 2016-12）
