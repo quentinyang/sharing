@@ -46,7 +46,7 @@
 
 1. 安居客PC整站（新房除外）（[www.anjuke.com](http://www.anjuke.com)）
     - 项目描述：安居客PC网站开发，如：首页、二手房、租房、商业地产、问答、地图找房等频道。
-    - 项目技术：`jQuery`、Jockjs、`PHP`。
+    - 项目技术：`jQuery`、`Jockjs`、`PHP`。
     - 个人绩效：
         1. 带领前端团队，对全站网站做过多次改版，提升UV和PV；
         1. 协助市场推广部门，开发市场活动项目和SEO，完成公司推广目标；
@@ -54,7 +54,7 @@
 
 1. 安个家TW（[m.angejia.com](http://m.angejia.com/)）&PC站（[www.angejia.com](http://www.angejia.com/)）
     - 项目描述：公司创办初期，通过TW（微信）不断试错，寻找第一批天使用户，反复不断迭代产品找方向。期间经历找房，找经纪人，房东手拉手，预约带看，直营中心，合伙人模式等。
-    - 项目技术：`H5`、`jQuery`/`Zepto`、Angular、`Gulp`、`Browserfify`、`UFA`
+    - 项目技术：`H5`、`jQuery`/`Zepto`、`Angular`、`Gulp`、`Browserfify`、`UFA`
     - 个人绩效：
         1. 带领前端团队，从初创的第一个产品开始迭代，负责用户端Web产品。（截至目前：TW`12035`UV，PC`1174`UV）
         1. 制订UI规范和通用样式库。
@@ -91,9 +91,9 @@
 #### 项目经验
 1. 2012/04-2014-05: SAP Lab的项目
      - 项目描述：多个SAP给客户方演示的POC Demo以及内部革新产品开发。
-     - 项目技术：`H5`, `SAPUI5`, `Angular`, `jQuery`, `Bootstrap`, CSS3, `D3` .etc.
+     - 项目技术：`H5`, `SAPUI5`, `Angular`, `jQuery`, `Bootstrap`, `CSS3`, `D3` .etc.
      - 个人绩效：
-        1.  作为前端开发工程师加入SAP团队，并帮助开发很多SAP POC的演示项目以及2个内部产品项目。这些项目都是前端应用或手机应用，并且大部分采用SAPUI5框架开发的。另外也有项目会用到Angular, `jQuery`, PhoneGap等。
+        1.  作为前端开发工程师加入SAP团队，并帮助开发很多SAP POC的演示项目以及2个内部产品项目。这些项目都是前端应用或手机应用，并且大部分采用SAPUI5框架开发的。另外也有项目会用到Angular, jQuery, PhoneGap等。
         2.  在SAP 团队中，作为群硕开发团队的team leader，管理前端开发。
 
 1. 2011/04-2012-03: Mosaic AEC Community, Autodesk
@@ -143,3 +143,8 @@
      - 项目描述：君创物流对库存情况的管理系统。
      - 项目技术：PHP,PostgreSQL
      - 个人绩效：根据需求完成功能开发，如：用户管理，库存管理，销售报表等。
+
+## 其他
+
+- 喜欢运动：滑板、徒步、篮球、羽毛、乒乓
+- 喜欢娱乐：K歌、美食、旅行、电影、游戏
