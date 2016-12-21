@@ -16,11 +16,11 @@
 | E-mail | <a href="mailto:ywjrg@163.com">ywjrg@163.com</a> |
 
 ## 个人简历
-- 约__10__年软件开发经验，含近5年前端开发经验和5年PHP开发。
-- __2__年多创业经历，有大前端团队管理经验（Web、RN、Native），有前端__构建__和__架构__能力。
+- 约**10**年软件开发经验，含近5年前端开发经验和5年PHP开发。
+- **2**年多创业经历，有大前端团队管理经验（Web、`RN`、`Native`），有前端__构建__和__架构__能力。
 - 个人要求高，执行力强，能够承担一定压力。
-- 熟悉前端技术栈：__H5__、__ES6__、__Nodejs/NPM__、__Webpack__/__Gulp__/Grunt、Browserfify、__Babel__、LESS/SASS等。前端框架：__Reactjs__+__Redux__，__ReactNative__，Requirejs, jQuery/Zepto, Angular, Backbone/Underscore, Bootstrap, D3等。
-- 熟悉PHP技术和OOP，对__Laravel__, Drupal, CI, Yii等流行PHP框架有项目开发经验。
+- 熟悉前端技术栈：__H5__、__ES6__、__Nodejs/NPM__、__Webpack__/__Gulp__/Grunt、Browserfify、__Babel__、LESS/SASS等。前端框架：__Reactjs__+__Redux__，__ReactNative__，Requirejs, `jQuery`/`Zepto`, Angular, Backbone/Underscore, Bootstrap, D3等。
+- 熟悉PHP技术和OOP，对**Laravel**, Drupal, CI, Yii等流行PHP框架有项目开发经验。
 - 熟悉服务器端技术，如: Linux, MySQL, Apache, Cache .etc.
 
 ## 求职意向
@@ -29,7 +29,9 @@
 期待职位：技术or管理均可考虑，主要看重公司发展和个人成长空间。
 
 ## 职业经验
+
 ### 安居客 + 安个家（上海）- 前端开发主管（2014-05 ～ 2016-12）
+
 - 在安居客负责二手房事业部前端团队，开发和维护PC网站。
 - 后被58收购之后，跟随CEO创办安个家一起创业。负责前端团队，开发PC，TW和内部所有Web项目，近期也开发了RN和NativeApp项目。
 
@@ -44,19 +46,19 @@
 
 1. 安居客PC整站（新房除外）（[www.anjuke.com](http://www.anjuke.com)）
     - 项目描述：安居客PC网站开发，如：首页、二手房、租房、商业地产、问答、地图找房等频道。
-    - 项目技术：jQuery、Jockjs、PHP。
+    - 项目技术：`jQuery`、Jockjs、`PHP`。
     - 个人绩效：
         1. 带领前端团队，对全站网站做过多次改版，提升UV和PV；
         1. 协助市场推广部门，开发市场活动项目和SEO，完成公司推广目标；
         1. 技术优化，提升网站性能（首屏速度）。
 
 1. 安个家TW（[m.angejia.com](http://m.angejia.com/)）&PC站（[www.angejia.com](http://www.angejia.com/)）
-    - 项目描述：公司创办初期，通过TW（微信）__不断试错__，寻找第一批天使用户，反复不断迭代产品找方向。期间经历找房，找经纪人，房东手拉手，预约带看，直营中心，合伙人模式等。
-    - 项目技术：h5、jquery/zepto、Angular、gulp、browserfify、UFA
+    - 项目描述：公司创办初期，通过TW（微信）不断试错，寻找第一批天使用户，反复不断迭代产品找方向。期间经历找房，找经纪人，房东手拉手，预约带看，直营中心，合伙人模式等。
+    - 项目技术：`H5`、`jQuery`/`Zepto`、Angular、`Gulp`、`Browserfify`、`UFA`
     - 个人绩效：
-        1. 带领前端团队，从初创的第一个产品开始迭代，负责用户端Web产品。（截至目前：TW 12035 UV，PC 1174 UV）
+        1. 带领前端团队，从初创的第一个产品开始迭代，负责用户端Web产品。（截至目前：TW`12035`UV，PC`1174`UV）
         1. 制订UI规范和通用样式库。
-        1. 前端架构，PC（jQuery + Gulp + Browserfify），TW（Requirejs + Zepto）。
+        1. 前端架构，PC（`jQuery` + `Gulp` + `Browserfify`），TW（`Requirejs` + `Zepto`）。
 
 1. 安个家管理系统（CRM、Boss、交易、Account等）
     - 项目描述：
@@ -65,18 +67,18 @@
         - 交易：订单查询、收付款查询、意向金、佣金、合伙人财务管理、交易知识库、交易各种报表、历史交易等。
         - Account：账户管理、权限管理等。
     - 项目技术：
-        前端统一架构（UFA）、Bootstrap、jQuery、Gulp、Browersify、PHP。
+        前端统一架构（`UFA`）、`Bootstrap`、`jQuery`、`Gulp`、`Browersify`、`PHP`。
     - 个人绩效：
-        1. UFA技术架构和内部AUI样式库；
+        1. `UFA`技术架构和内部`AUI`样式库；
         1. 协调开发资源，参与产品沟通，完成开发维护，实现公司业务目标；
 
 1. 生态圈项目
     - 项目描述：最懂中介的房源信息共享平台，包含微信、App和PC。包含看房、积分、充值、提现等功能。
-    - 项目技术：Zepto、UFA、ReactNative、Redux、Imutable、PHP
+    - 项目技术：`Zepto`、`UFA`、`ReactNative`、`Redux`、`Imutable`、`PHP`
     - 个人绩效：
         1. 带领团队完成项目开发和业务指标，实现从亏损到盈利；
         1. 通过产品和技术手段加速房源审核，促进公司的房源增长；
-        1. 带领项目组从微信（Requirejs+zepto）到Hybrid（phonegap）到ReactNative的技术提升。
+        1. 带领项目组从微信（`Requirejs`+`Zepto`）到`Hybrid`（`Phonegap`）到`ReactNative`的技术提升。
 
 ### 群硕软件开发（上海）- 高级软件工程师（2010-05 ～ 2014-05）
 
@@ -89,9 +91,9 @@
 #### 项目经验
 1. 2012/04-2014-05: SAP Lab的项目
      - 项目描述：多个SAP给客户方演示的POC Demo以及内部革新产品开发。
-     - 项目技术：HTML5, SAPUI5, Angular, jQuery, Bootstrap, CSS3, D3 .etc.
+     - 项目技术：`H5`, `SAPUI5`, `Angular`, `jQuery`, `Bootstrap`, CSS3, `D3` .etc.
      - 个人绩效：
-        1.  作为前端开发工程师加入SAP团队，并帮助开发很多SAP POC的演示项目以及2个内部产品项目。这些项目都是前端应用或手机应用，并且大部分采用SAPUI5框架开发的。另外也有项目会用到Angular, jQuery, PhoneGap等。
+        1.  作为前端开发工程师加入SAP团队，并帮助开发很多SAP POC的演示项目以及2个内部产品项目。这些项目都是前端应用或手机应用，并且大部分采用SAPUI5框架开发的。另外也有项目会用到Angular, `jQuery`, PhoneGap等。
         2.  在SAP 团队中，作为群硕开发团队的team leader，管理前端开发。
 
 1. 2011/04-2012-03: Mosaic AEC Community, Autodesk
