@@ -48,7 +48,7 @@
         1. 协助市场推广部门，开发市场活动项目和SEO，完成公司推广目标；
         1. 技术优化，提升网站性能（首屏速度）。
 
-1. 安个家[TW m.angejia.com](http://m.angejia.com/)&[PC](http://www.angejia.com/)
+1. 安个家[TW m.angejia.com](http://m.angejia.com/)&[PC www.angejia.com](http://www.angejia.com/)
     - 项目描述：公司创办初期，通过TW（微信）__不断试错__，寻找第一批天使用户，反复不断迭代产品找方向。期间经历找房，找经纪人，房东手拉手，预约带看，直营中心，合伙人模式等。
     - 项目技术：h5、jquery/zepto、Angular、gulp、browserfify、UFA
     - 个人绩效：
