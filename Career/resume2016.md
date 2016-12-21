@@ -17,7 +17,7 @@
 
 ## 个人简历
 - 约**10**年软件开发经验，含近5年前端开发经验和5年PHP开发。
-- **2**年多创业经历，有大前端团队管理经验（Web、`RN`、`Native`），有前端__构建__和__架构__能力。
+- **2**年多创业经历，有大前端团队管理经验（Web、`RN`、`Native`），有前端**构建**和**架构**能力。
 - 个人要求高，执行力强，能够承担一定压力。
 - 熟悉前端技术栈：__H5__、__ES6__、__Nodejs/NPM__、__Webpack__/__Gulp__/Grunt、Browserfify、__Babel__、LESS/SASS等。前端框架：__Reactjs__+__Redux__，__ReactNative__，Requirejs, `jQuery`/`Zepto`, Angular, Backbone/Underscore, Bootstrap, D3等。
 - 熟悉PHP技术和OOP，对**Laravel**, Drupal, CI, Yii等流行PHP框架有项目开发经验。
