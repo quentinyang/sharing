@@ -48,7 +48,7 @@
     - __toString()__  返回字符串。
     - valueOf()   返回某个字符串对象的原始值。
 
- 1. Number. E.g.: `100` `0.13`            
+ 1. Number. E.g.: `100` `0.13`
 
     Number对象属性：
 
@@ -82,7 +82,7 @@ __参考链接：__
  - <a href="http://www.w3school.com.cn/jsref/jsref_obj_boolean.asp" target="_blank">JavaScript Boolean 对象</a>
 
 #### 2. Array & Object
-    
+
 ```
 var obj = new Object();
 obj.name = "Object name";
@@ -142,7 +142,7 @@ for (var i in test) {
 
 for (var i in test) {
     if (test.hasOwnProperty(i)) {
-        arr2.push(i);    
+        arr2.push(i);
     }
 }
 
@@ -285,7 +285,7 @@ console.log('Mammal skills: ' + dog.skills);//得到被继承的属性 Output: M
 dog.run(10);//dog.run is not a function. 压根就没有继承到prototype上的run方法
 ```
 
-总结一下: 
+总结一下:
 
 使用call/apply的问题：很严重的问题是，压根没发继承prototype上的属性和方法。
 
@@ -353,10 +353,55 @@ Person.prototype.constructor = Mammal;
 
 怎么解决？
 
-有个文章提到，但是没看懂。<a href="http://segmentfault.com/a/1190000002440502" target="_blank">参考文章</a>
+有个文章提到，参考<a href="https://segmentfault.com/a/1190000002440502#articleHeader9" target="_blank">寄生组合式继承</a>
+
+看得有点懵逼，不过发现，只要改成`Mammal.prototype = Animal.prototype` 也就解决了new 2次的问题。
+```
+<script>
+//动物
+function Animal(name) {
+    console.log('Animal');
+    this.name = name;
+    this.skills = ['climb'];
+}
+Animal.prototype.run = function(km) {
+    console.log(this.name + ' run: ' + km + 'km.');
+};
+
+//哺乳动物
+function Mammal(name) {
+    Animal.call(this, name);//对象冒充，给超类传参
+    this.limb = 4;//肢体
+}
+Mammal.prototype = Animal.prototype;//注意这里跟上面不同，原型继承
+
+var dog = new Mammal('HaShiQi');
+console.log('Mammal: ' + dog.name, 'Has ' + dog.limb + ' limb.');//Output: Mammal: HaShiQi Has 4 limb.
+console.log('Mammal skills: ' + dog.skills);//得到被继承的属性 Output: Mammal skills: climb
+dog.run(10);//HaShiQi run: 10km.
 
 
- 
+//人类：继续继承
+function Person(name) {
+    Mammal.call(this, name);
+    this.hasGendar = true;
+}
+Person.prototype = Mammal.prototype;//注意这里跟上面不同，继承了 Animal 和 Mammal
+
+var quentin = new Person('Quentin');
+console.log('Person: ' + quentin.name, 'Has ' + quentin.limb + ' limb.');//继承了 Animal 和 Mammal
+console.log('Person has gendar: ' + quentin.hasGendar);
+
+quentin.skills.push('php');
+console.log('Person skills: ' + quentin.skills);
+
+var james = new Person('James');
+console.log('Person', james.name, 'Has skills: ' + james.skills);//注意这里不存在问题了
+</script>
+
+```
+
+
 ### 作用域和闭包
 
 #### 作用域
@@ -372,8 +417,8 @@ var obj1 = {
 };
 
 var name = "Window.name";
-obj1.method();
-fn();
+obj1.method();//Quentin
+fn();//Window.name
 ```
 
 ```
@@ -381,14 +426,14 @@ fn();
 function fn() {
     return function(){
         console.log(this.name);
-    }    
+    }
 }
 
 function fn2() {
     var self = this;
     return function(){
         console.log(self.name);
-    }    
+    }
 }
 var obj1 = {
     name: 'Quentin',
@@ -397,8 +442,8 @@ var obj1 = {
 };
 
 var name = "Window.name";
-obj1.method()();
-obj1.method2()();
+obj1.method()();//Window.name
+obj1.method2()();//Quentin
 
 ```
 
@@ -410,7 +455,8 @@ for (var i = 0; i < 10; i++) {
     setTimeout((function(){
             console.log(i);
     }), 1000);
-} 
+}
+// 10, 10, 10, 10, 10, 10, 10, 10, 10, 10
 
 // example 2
 for (var i = 0; i < 10; i++) {
@@ -418,7 +464,9 @@ for (var i = 0; i < 10; i++) {
         return function(){console.log(i);}
     })(i), 1000);
 }
+// 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 ```
+
 
 ## 附录
 
