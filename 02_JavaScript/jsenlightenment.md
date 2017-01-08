@@ -344,7 +344,7 @@ console.log(james.skills);//注意这里不存在问题了
 
 ```
 // 这点是最容易解决的
-Person.prototype.constructor = Mammal;
+Person.prototype.constructor = Person;
 ```
 
 等等，还没结束。
@@ -358,6 +358,22 @@ Person.prototype.constructor = Mammal;
 看得有点懵逼，不过发现，只要改成`Mammal.prototype = Animal.prototype` 也就解决了new 2次的问题。
 ```
 <script>
+// 注意这里，是核心代码
+function inheritPrototype(superClass, subClass) {
+    // 创建对象
+    var prototype = createObj(superClass.prototype);
+    // 增强对象，修复构造函数问题
+    prototype.constructor = subClass;
+    // 指定对象（原型）
+    subClass.prototype = prototype;
+}
+
+function createObj(proto){
+    function F(){}
+    F.prototype = proto;
+    return new F();
+}
+
 //动物
 function Animal(name) {
     console.log('Animal');
@@ -373,7 +389,11 @@ function Mammal(name) {
     Animal.call(this, name);//对象冒充，给超类传参
     this.limb = 4;//肢体
 }
-Mammal.prototype = Animal.prototype;//注意这里跟上面不同，原型继承
+
+inheritPrototype(Animal, Mammal);//通过这里实现继承
+
+// Mammal.prototype = Animal.prototype;//注意这里跟上面不同，原型继承
+// Mammal.prototype.constructor = Mammal;
 
 var dog = new Mammal('HaShiQi');
 console.log('Mammal: ' + dog.name, 'Has ' + dog.limb + ' limb.');//Output: Mammal: HaShiQi Has 4 limb.
@@ -386,7 +406,9 @@ function Person(name) {
     Mammal.call(this, name);
     this.hasGendar = true;
 }
-Person.prototype = Mammal.prototype;//注意这里跟上面不同，继承了 Animal 和 Mammal
+inheritPrototype(Mammal, Person);//通过这里实现继承
+// Person.prototype = Mammal.prototype;//注意这里跟上面不同，继承了 Animal 和 Mammal
+// Person.prototype.constructor = Person;
 
 var quentin = new Person('Quentin');
 console.log('Person: ' + quentin.name, 'Has ' + quentin.limb + ' limb.');//继承了 Animal 和 Mammal
