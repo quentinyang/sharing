@@ -489,6 +489,10 @@ for (var i = 0; i < 10; i++) {
 // 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 ```
 
+#### 浮点数问题
+
+- [IEEE 754](https://zh.wikipedia.org/wiki/IEEE_754)
+- [浮点数的二进制表示@阮一峰](http://www.ruanyifeng.com/blog/2010/06/ieee_floating-point_representation.html)
 
 ## 附录
 
