@@ -81,4 +81,4 @@ Successfully logged-in. Your session file was written to /Users/quentin/.code-pu
 - [Code Push - Get started fast](http://microsoft.github.io/code-push/)
 - [Github react native code push](https://github.com/Microsoft/react-native-code-push)
 - [Codepush Cli](http://microsoft.github.io/code-push/docs/cli.html)
-- [CodePush CLI中文版](https://github.com/FSKS/react/tree/master/3rd-part/codepush/README.md)
+- [CodePush CLI中文版](https://github.com/Microsoft/code-push/blob/master/cli/README-cn.md)
